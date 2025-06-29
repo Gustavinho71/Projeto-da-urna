@@ -9,5 +9,65 @@ package com.mycompany.model;
  * @author dejae
  */
 public class Candidato {
-    
+
+    private String nome;
+    private String partido;
+    private String numero;
+    private String caminhoImg;
+    private int votos;
+
+    public Candidato(String nome, String partido, String numero, String caminhoImg) {
+        this.nome = nome;
+        this.partido = partido;
+        this.numero = numero;
+        this.caminhoImg = caminhoImg;
+        this.votos = 0; 
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getPartido() {
+        return partido;
+    }
+
+    public void setPartido(String partido) {
+        this.partido = partido;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getCaminhoImg() {
+        return caminhoImg;
+    }
+
+    public void setCaminhoImg(String caminhoImg) {
+        this.caminhoImg = caminhoImg;
+    }
+
+    public int getVotos() {
+        return votos;
+    }
+
+    public void setVotos(int votos) {
+        this.votos = votos;
+    }
+
+    public String getInfoResumo() {
+        return numero + " - " + nome + " (" + partido + ")"; //Usar isso na tela de relátorio!//
+    }
 }
+
+
+ 

@@ -1,5 +1,8 @@
-com\mycompany\view\Santinho$1.class
+com\mycompany\model\Candidato.class
+com\mycompany\model\Voto.class
 com\mycompany\view\Santinho.class
-com\mycompany\view\Urna$1.class
 com\mycompany\view\Urna.class
 com\mycompany\view\Relatorio.class
+com\mycompany\view\Santinho$1.class
+com\mycompany\model\Partido.class
+com\mycompany\view\Urna$1.class

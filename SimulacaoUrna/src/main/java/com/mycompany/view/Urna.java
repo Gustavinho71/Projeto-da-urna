@@ -5,6 +5,8 @@
 
 package com.mycompany.view;
 
+
+
 /**
  *
  * @author dejae
@@ -54,13 +56,14 @@ public class Urna extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        lblNome = new javax.swing.JLabel();
-        lblPartido = new javax.swing.JLabel();
+        lblNomeCandidato = new javax.swing.JLabel();
+        lblPartidoCandidato = new javax.swing.JLabel();
         lblCandidatoImg = new javax.swing.JLabel();
         btnVerSantinho = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
         painelBotoes.setBackground(new java.awt.Color(255, 255, 255));
         painelBotoes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -208,7 +211,7 @@ public class Urna extends javax.swing.JFrame {
         );
 
         telaDaUrna.setBackground(new java.awt.Color(255, 255, 255));
-        telaDaUrna.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
+        telaDaUrna.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         labelNumDigitado1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         labelNumDigitado1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -237,7 +240,9 @@ public class Urna extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel5.setText("Partido:");
 
-        lblNome.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        lblNomeCandidato.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+
+        lblPartidoCandidato.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout telaDaUrnaLayout = new javax.swing.GroupLayout(telaDaUrna);
         telaDaUrna.setLayout(telaDaUrnaLayout);
@@ -264,49 +269,53 @@ public class Urna extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(labelNumDigitado5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(telaDaUrnaLayout.createSequentialGroup()
-                                .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel5)
                                     .addComponent(jLabel4))
-                                .addGap(44, 44, 44)
-                                .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lblNome, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
-                                    .addComponent(lblPartido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(208, 208, 208)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
-                .addComponent(lblCandidatoImg, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                                .addGap(26, 26, 26)
+                                .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblNomeCandidato, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblPartidoCandidato, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(16, 16, 16)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
+                .addComponent(lblCandidatoImg, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43))
         );
         telaDaUrnaLayout.setVerticalGroup(
             telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(telaDaUrnaLayout.createSequentialGroup()
                 .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, telaDaUrnaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblCandidatoImg, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53))
                     .addGroup(telaDaUrnaLayout.createSequentialGroup()
-                        .addGap(179, 179, 179)
-                        .addComponent(lblVereador)
-                        .addGap(48, 48, 48)
                         .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(telaDaUrnaLayout.createSequentialGroup()
+                                .addGap(248, 248, 248)
                                 .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(telaDaUrnaLayout.createSequentialGroup()
                                         .addGap(14, 14, 14)
                                         .addComponent(jLabel3))
                                     .addComponent(labelNumDigitado1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelNumDigitado2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(45, 45, 45)
-                                .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel4)
-                                    .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(62, 62, 62)
-                                .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel5)
-                                    .addComponent(lblPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(labelNumDigitado3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelNumDigitado4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelNumDigitado5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(telaDaUrnaLayout.createSequentialGroup()
-                        .addGap(145, 145, 145)
-                        .addComponent(lblCandidatoImg, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 339, Short.MAX_VALUE))
+                                    .addComponent(labelNumDigitado2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(telaDaUrnaLayout.createSequentialGroup()
+                                .addGap(179, 179, 179)
+                                .addComponent(lblVereador)
+                                .addGap(48, 48, 48)
+                                .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelNumDigitado3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelNumDigitado4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelNumDigitado5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(45, 45, 45)
+                        .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(lblNomeCandidato, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(62, 62, 62)))
+                .addGroup(telaDaUrnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblPartidoCandidato, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(0, 206, Short.MAX_VALUE))
         );
 
         btnVerSantinho.setBackground(new java.awt.Color(1, 61, 111));
@@ -329,13 +338,14 @@ public class Urna extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(telaDaUrna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 225, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 188, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(painelBotoes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(115, 115, 115)))
-                .addGap(96, 96, 96))
+                        .addGap(211, 211, 211))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(painelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(86, 86, 86))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(126, 126, 126)
                 .addComponent(btnVerSantinho, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -353,7 +363,7 @@ public class Urna extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(92, 92, 92)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(painelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -394,7 +404,6 @@ public class Urna extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        System.out.println("janela aberta");
         java.awt.EventQueue.invokeLater(() -> new Urna().setVisible(true));
     }
 
@@ -413,8 +422,8 @@ public class Urna extends javax.swing.JFrame {
     private javax.swing.JLabel labelNumDigitado4;
     private javax.swing.JLabel labelNumDigitado5;
     private javax.swing.JLabel lblCandidatoImg;
-    private javax.swing.JLabel lblNome;
-    private javax.swing.JLabel lblPartido;
+    private javax.swing.JLabel lblNomeCandidato;
+    private javax.swing.JLabel lblPartidoCandidato;
     private javax.swing.JLabel lblVereador;
     private javax.swing.JButton num0;
     private javax.swing.JButton num1;
@@ -499,4 +508,28 @@ public javax.swing.JButton getBtnCorrige() {
 public javax.swing.JButton getBtnConfirma() {
     return btnConfirma;
 }
+public javax.swing.JLabel getLblCandidatoImg() {
+    return lblCandidatoImg;
+}
+
+public void setLblCandidatoImg(javax.swing.JLabel lblCandidatoImg) {
+    this.lblCandidatoImg = lblCandidatoImg;
+}
+
+public javax.swing.JLabel getLblNomeCandidato() {
+    return lblNomeCandidato;
+}
+
+public void setLblNomeCandidato(javax.swing.JLabel lblNomeCandidato) {
+    this.lblNomeCandidato = lblNomeCandidato;
+}
+
+public javax.swing.JLabel getLblPartidoCandidato() {
+    return lblPartidoCandidato;
+}
+
+public void setLblPartidoCandidato(javax.swing.JLabel lblPartidoCandidato) {
+    this.lblPartidoCandidato = lblPartidoCandidato;
+}
+
 }

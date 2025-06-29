@@ -10,4 +10,29 @@ package com.mycompany.model;
  */
 public class Partido {
     
+	private String sigla;
+	private String numPrefixo;
+	
+	public Partido(String sigla, String numPrefixo) {
+		super();
+		this.sigla = sigla;
+		this.numPrefixo = numPrefixo;
+	}
+
+	public String getSigla() {
+		return sigla;
+	}
+
+	public void setSigla(String sigla) {
+		this.sigla = sigla;
+	}
+
+	public String getNumPrefixo() {
+		return numPrefixo;
+	}
+
+	public void setNumPrefixo(String numPrefixo) {
+		this.numPrefixo = numPrefixo;
+	}
+	
 }
