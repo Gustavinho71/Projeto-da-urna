@@ -1,8 +1,10 @@
+package com.mycompany.model;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.model;
+
 
 /**
  *
@@ -10,12 +12,12 @@ package com.mycompany.model;
  */
 public class Voto {
     
-	private Candidato candidato;
+	private CandidatoDAO candidato;
 	private boolean branco;
 	private boolean nulo;
 	
 	
-	public Voto(Candidato candidato, boolean branco, boolean nulo) {
+	public Voto(CandidatoDAO candidato, boolean branco, boolean nulo) {
 		super();
 		this.candidato = candidato;
 		this.branco = branco;
@@ -23,12 +25,12 @@ public class Voto {
 	}
 
 
-	public Candidato getCandidato() {
+	public CandidatoDAO getCandidato() {
 		return candidato;
 	}
 
 
-	public void setCandidato(Candidato candidato) {
+	public void setCandidato(CandidatoDAO candidato) {
 		this.candidato = candidato;
 	}
 

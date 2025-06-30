@@ -1,6 +1,6 @@
-com\mycompany\model\Candidato.class
 com\mycompany\model\Voto.class
 com\mycompany\view\Santinho.class
+com\mycompany\model\CandidatoDAO.class
 com\mycompany\view\Urna.class
 com\mycompany\view\Relatorio.class
 com\mycompany\view\Santinho$1.class
