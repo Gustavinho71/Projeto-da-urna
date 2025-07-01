@@ -15,6 +15,8 @@ public class Candidato {
     private String numero;
     private String caminhoImg;
     private int votos;
+    
+    public Candidato(){}
 
     public Candidato(String nome, String partido, String numero, String caminhoImg) {
         this.nome = nome;
@@ -23,6 +25,7 @@ public class Candidato {
         this.caminhoImg = caminhoImg;
         this.votos = 0; 
     }
+
 
     public String getNome() {
         return nome;
