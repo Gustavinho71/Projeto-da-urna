@@ -8,20 +8,14 @@ package com.mycompany.model;
  *
  * @author dejae
  */
-public class Partido {
-     private String prefixo; 
-    private String nome;    
 
-    public Partido(String prefixo, String nome) {
-        this.prefixo = prefixo;
+public class Partido {
+    private String nome;
+
+    public Partido(String nome) {
         this.nome = nome;
     }
 
-    public String getPrefixo() {
-        
-        return prefixo; 
-    }
-    
     public String getNome() {
         return nome;
     }

@@ -4,16 +4,36 @@
  */
 package com.mycompany.model;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author Edu2
  */
+
+
 public class Voto {
+    public enum TipoVoto {
+    NORMAL, BRANCO, NULO;
+}
     
-    private Candidato numero;
-    
-    public Voto(Candidato numero){
-        this.numero = numero;
+    private String numeroCandidato;  // pode ser null para branco/nulo
+    private TipoVoto tipoVoto;
+    private LocalDateTime timestamp;
+
+    public Voto(String numeroCandidato, TipoVoto tipoVoto) {
+        this.numeroCandidato = numeroCandidato;
+        this.tipoVoto = tipoVoto;
+        this.timestamp = LocalDateTime.now();
     }
-    
+
+    // getters e setters
+    public String getNumeroCandidato() { return numeroCandidato; }
+    public void setNumeroCandidato(String numeroCandidato) { this.numeroCandidato = numeroCandidato; }
+
+    public TipoVoto getTipoVoto() { return tipoVoto; }
+    public void setTipoVoto(TipoVoto tipoVoto) { this.tipoVoto = tipoVoto; }
+
+    public LocalDateTime getTimestamp() { return timestamp; }
+    public void setTimestamp(LocalDateTime timestamp) { this.timestamp = timestamp; }
 }

@@ -4,6 +4,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import java.time.format.DateTimeFormatter;
 import org.bson.Document;
 
 /*
@@ -17,18 +18,29 @@ import org.bson.Document;
  * @author dejae
  */
 public class VotoDAO {
-    
 
     private final MongoCollection<Document> collection;
 
     public VotoDAO() {
-        MongoClient client = MongoClients.create("mongodb://localhost:27017");
-        MongoDatabase db = client.getDatabase("urna");
+        MongoDatabase db = MongoConnection.getInstance().getDatabase();
         collection = db.getCollection("votos");
     }
 
-    public void registrarVoto(String numeroCandidato) {
-        Document voto = new Document("numero", numeroCandidato);
-        collection.insertOne(voto);
+    public void registrarVoto(Voto voto) {
+        try {
+            Document doc = new Document();
+            doc.append("numero", voto.getNumeroCandidato());
+            doc.append("tipoVoto", voto.getTipoVoto().name());
+            doc.append("timestamp", voto.getTimestamp().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+
+            collection.insertOne(doc);
+        } catch (Exception e) {
+            System.err.println("Erro ao registrar voto: " + e.getMessage());
+        }
+    }
+
+    public void registrarVoto(Object object, Voto.TipoVoto tipoVoto) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
+
