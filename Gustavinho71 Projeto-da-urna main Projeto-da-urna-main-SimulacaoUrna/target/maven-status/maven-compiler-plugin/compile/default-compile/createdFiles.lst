@@ -7,7 +7,6 @@ com\mycompany\model\VotoDAO.class
 com\mycompany\model\Partido.class
 com\mycompany\view\Santinho.class
 com\mycompany\model\CandidatoDAO.class
-com\mycompany\view\Relatorio.class
 com\mycompany\view\Santinho$1.class
 com\mycompany\view\Urna$1.class
 com\mycompany\controller\UrnaController.class
