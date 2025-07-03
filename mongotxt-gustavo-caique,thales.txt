@@ -1,0 +1,10 @@
+ use urnaDB
+
+db.createCollection("votos")
+
+db.candidatos.insertMany([{ numero: "91001", nome: "Golfe", partido: "PEsp", caminhoFoto: "golfe.jpg", votos: 0 },{ numero: "91002", nome: "Beisebol", partido: "PEsp", caminhoFoto: "beisebol.jpg", votos: 0 },{ numero: "91003", nome: "Ginástica Artística", partido: "PEsp", caminhoFoto: "ginastica.jpg", votos: 0 },{ numero: "92001", nome: "Rock", partido: "PMus", caminhoFoto: "rock.jpg", votos: 0 },{ numero: "92002", nome: "Sertanejo", partido: "PMus", caminhoFoto: "sertanejo.jpg", votos: 0 },{ numero: "92003", nome: "Música Popular Brasileira", partido: "PMus", caminhoFoto: "mpb.jpg", votos: 0 },{ numero: "93001", nome: "Astronauta", partido: "PProf", caminhoFoto: "astronauta.jpg", votos: 0 },{ numero: "93002", nome: "Pintor", partido: "PProf", caminhoFoto: "pintor.jpg", votos: 0 },{ numero: "93003", nome: "Enfermeira", partido: "PProf", caminhoFoto: "enfermeira.jpg", votos: 0 },{ numero: "94001", nome: "Páscoa", partido: "PFest", caminhoFoto: "pascoa.jpg", votos: 0 },{ numero: "94002", nome: "Oktoberfest", partido: "PFest", caminhoFoto: "oktoberfest.jpg", votos: 0 },{ numero: "94003", nome: "Reveillon", partido: "PFest", caminhoFoto: "reveillon.jpg", votos: 0 },{ numero: "95001", nome: "Curupira", partido: "PFolc", caminhoFoto: "curupira.jpg", votos: 0 },{ numero: "95002", nome: "Cabra Cabriola", partido: "PFolc", caminhoFoto: "cabriola.jpg", votos: 0 },{ numero: "95003", nome: "Cuca", partido: "PFolc", caminhoFoto: "cuca.jpg", votos: 0 }]);
+
+db.votos.countDocuments({ branco: true })
+
+db.votos.countDocuments({ nulo: true })
+
